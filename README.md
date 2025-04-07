@@ -36,17 +36,9 @@ By combining both tools, we create a reliable and repeatable infrastructure pipe
 
 ## 📂 Folder Structure
 
-terraform-ansible-hybrid-lab/
-├── ansible/
-│   ├── aws_inventory.ini
-│   └── playbooks/
-│       └── patching.yml
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   └── outputs.tf
-├── .gitignore
-└── README.md
+<pre lang="markdown"> ```bash terraform-ansible-hybrid-lab/ ├── terraform/ │ ├── main.tf # Terraform configuration for EC2 and resources │ ├── variables.tf # Input variables │ ├── outputs.tf # Outputs like public IP ├── ansible/ │ ├── aws_inventory.ini # Static Ansible inventory with EC2 IP │ └── playbooks/ │ └── patching.yml # Ansible playbook for security patching ├── .gitignore # Ignore sensitive and generated files └── README.md # Project overview and instructions ``` </pre>
+
+
 
 
 ---
@@ -105,6 +97,8 @@ ansible-playbook -i ansible/aws_inventory.ini ansible/playbooks/patching.yml
 
 🧹 Clean and reusable infrastructure + config
 
+
+
 📌  Future Improvements
  
 Automate Ansible inventory using Terraform output
@@ -118,5 +112,4 @@ Add a CI/CD pipeline with GitHub Actions or Jenkins
 
 👨‍💻 Author
 
-Made with 💻 by [Harsh Rathod]
-
+Made with by [Harsh Rathod]
