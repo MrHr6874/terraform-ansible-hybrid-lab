@@ -1,0 +1,9 @@
+---
+- name: Security patching on AWS EC2
+  hosts: aws_targets
+  become: true
+  tasks:
+    - name: Update all packages (Amazon Linux using dnf)
+      dnf:
+        name: '*'
+        state: latest

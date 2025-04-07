@@ -1,0 +1,26 @@
+# SSH keys
+*.pem
+*.key
+*.pub
+.ssh/
+**/id_rsa
+**/id_rsa.pub
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+terraform.tfvars
+
+# Ansible secrets
+*.retry
+*.log
+
+# OS files
+.DS_Store
+*.swp
+
+# Python cache (just in case)
+__pycache__/
+*.pyc

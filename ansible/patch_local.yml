@@ -1,0 +1,10 @@
+---
+- name: Patch this local Ubuntu VM
+  hosts: local
+  become: true
+
+  tasks:
+    - name: Update and upgrade packages
+      apt:
+        update_cache: yes
+        upgrade: dist
