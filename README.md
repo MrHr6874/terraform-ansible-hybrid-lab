@@ -36,7 +36,19 @@ By combining both tools, we create a reliable and repeatable infrastructure pipe
 
 ## 📂 Folder Structure
 
-<pre lang="markdown"> ```bash terraform-ansible-hybrid-lab/ ├── terraform/ │ ├── main.tf # Terraform configuration for EC2 and resources │ ├── variables.tf # Input variables │ ├── outputs.tf # Outputs like public IP ├── ansible/ │ ├── aws_inventory.ini # Static Ansible inventory with EC2 IP │ └── playbooks/ │ └── patching.yml # Ansible playbook for security patching ├── .gitignore # Ignore sensitive and generated files └── README.md # Project overview and instructions ``` </pre>
+<pre lang="markdown"> 
+```bash terraform-ansible-hybrid-lab/ 
+   ├── terraform/ 
+   │ ├── main.tf # Terraform configuration for EC2 and resources 
+   │ ├── variables.tf # Input variables 
+   │ ├── outputs.tf # Outputs like public IP 
+   ├── ansible/ 
+   │ ├── aws_inventory.ini # Static Ansible inventory with EC2 IP 
+   │ └── playbooks/ 
+   │ └── patching.yml # Ansible playbook for security patching 
+   ├── .gitignore # Ignore sensitive and generated files 
+   └── README.md # Project overview and instructions ``` 
+</pre>
 
 
 
