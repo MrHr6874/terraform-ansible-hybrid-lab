@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "demo-key"
-  public_key = file("/home/harsh/.ssh/id_rsa.pub")
+  public_key = file("path_to_your_public_key")
 }
 
 resource "aws_security_group" "allow_ssh" {
@@ -41,7 +41,7 @@ resource "aws_instance" "web" {
   provisioner "local-exec" {
     command = <<EOT
 echo "[aws_targets]
-${self.public_ip} ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa" > ../ansible/aws_inventory.ini
+${self.public_ip} ansible_user=ubuntu ansible_ssh_private_key_file=path_to_your_private_key" > ../ansible/aws_inventory.ini
 EOT
   }
 }
