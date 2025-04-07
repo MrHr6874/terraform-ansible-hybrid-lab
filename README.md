@@ -37,7 +37,8 @@ By combining both tools, we create a reliable and repeatable infrastructure pipe
 ## 📂 Folder Structure
 
 <pre lang="markdown"> 
-```terraform-ansible-hybrid-lab/ 
+```
+terraform-ansible-hybrid-lab/ 
    ├── terraform/ 
    │ ├── main.tf # Terraform configuration for EC2 and resources 
    │ ├── variables.tf # Input variables 
@@ -65,7 +66,8 @@ By combining both tools, we create a reliable and repeatable infrastructure pipe
 
 ## 2️⃣  Set Environment Variables (Optional but cleaner)
 
-```export AWS_ACCESS_KEY_ID=<your-access-key>
+```
+   export AWS_ACCESS_KEY_ID=<your-access-key>
    export AWS_SECRET_ACCESS_KEY=<your-secret-key>
    export AWS_DEFAULT_REGION=your_region 
 ```
@@ -84,7 +86,7 @@ terraform apply
 
 ## 6️⃣  Run Security Patching Playbook
 
-ansible-playbook -i ansible/aws_inventory.ini ansible/playbooks/patching.yml
+```ansible-playbook -i ansible/aws_inventory.ini ansible/playbooks/patching.yml``` 
 
 📦 Example patching.yml:
 
@@ -123,6 +125,10 @@ Push logs and patch reports to CloudWatch or S3
 Add a CI/CD pipeline with GitHub Actions or Jenkins
 
 
-👨‍💻 Author
 
-Made with by [Harsh Rathod]
+
+
+
+
+👨‍ 💻 Author
+ [Harsh Rathod]
