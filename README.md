@@ -37,7 +37,7 @@ By combining both tools, we create a reliable and repeatable infrastructure pipe
 ## 📂 Folder Structure
 
 <pre lang="markdown"> 
-```bash terraform-ansible-hybrid-lab/ 
+```terraform-ansible-hybrid-lab/ 
    ├── terraform/ 
    │ ├── main.tf # Terraform configuration for EC2 and resources 
    │ ├── variables.tf # Input variables 
@@ -65,16 +65,17 @@ By combining both tools, we create a reliable and repeatable infrastructure pipe
 
 ## 2️⃣  Set Environment Variables (Optional but cleaner)
 
-export AWS_ACCESS_KEY_ID=<your-access-key>
-export AWS_SECRET_ACCESS_KEY=<your-secret-key>
-export AWS_DEFAULT_REGION=your_region
+```export AWS_ACCESS_KEY_ID=<your-access-key>
+   export AWS_SECRET_ACCESS_KEY=<your-secret-key>
+   export AWS_DEFAULT_REGION=your_region 
+```
 
 ## 3️⃣  Provision EC2 with Terraform
-
+```
 cd terraform
 terraform init
 terraform apply
-
+```
 ## 4️⃣  Update Ansible Inventory File
 
 # ansible/aws_inventory.ini
